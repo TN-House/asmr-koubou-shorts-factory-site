@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="ASMR KOUBOU Shorts Factory：本人のYouTubeチャンネルの動画制作、アップロード、視聴分析を支援する個人運用ツール。">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>プライバシーポリシー | ASMR KOUBOU Shorts Factory</title>
+<link rel="canonical" href="https://tn-house.github.io/asmr-koubou-shorts-factory-site/privacy.html">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#content">本文へ移動</a>
+<header><p class="brand">ASMR KOUBOU <span>Shorts Factory</span></p><nav aria-label="メイン"><a href="./">紹介</a><a href="privacy.html">プライバシー</a><a href="terms.html">利用条件</a></nav></header>
+<main id="content"><article><p class="eyebrow">ASMR KOUBOU Shorts Factory</p><h1>プライバシーポリシー</h1>
+<p class="lede">本ポリシーは、TN-Houseが管理する ASMR KOUBOU Shorts Factory のGoogle・YouTubeデータの取り扱いと、この説明サイトの利用に適用されます。</p>
+<h2>対象と目的</h2>
+<p>本ツールは、ASMR-KOUBOU チャンネルの運営者本人による個人運用を対象とします。本人の動画制作、承認されたアップロード、チャンネルの確認、視聴分析、企画改善に情報を利用します。YouTube API Servicesを使用します。</p>
+<h2>アクセスする情報と権限</h2>
+<dl>
+<dt>youtube.upload</dt><dd>制作した動画ファイル、タイトル、説明文、公開設定などをYouTubeに送信します。公開アップロードを実行すると、動画と公開メタデータはYouTube上で公開されます。</dd>
+<dt>youtube.readonly</dt><dd>認可したチャンネルのID・名称、および動画のID・メタデータ・公開状態・処理状態などを読み取り、対象チャンネルと送信結果を照合します。</dd>
+<dt>yt-analytics.readonly</dt><dd>本人のチャンネルや動画について、視聴回数などの集計データを取得します。実装には再生時間・視聴維持・反応・流入元などの非収益分析項目もあります。継続運用の現行計測は動画ごとの日別視聴回数を中心にしています。</dd>
+</dl>
+<p>OAuth認可で発行されたアクセストークン・リフレッシュトークンと、本人が用意したOAuthクライアント情報を、同意したAPIアクセスに使用します。個々の視聴者の氏名やメールアドレスを取得する機能はありません。</p>
+<h2>保存する情報</h2>
+<p>認証トークンはmacOS Keychainで管理します。OAuthクライアントJSONは本人のMacにあるファイルを読み取ります。認可の確認記録、チャンネルや動画の識別情報、送信状態、取得した分析データと取得時点、分析の要約、企画・試作記録は、本人のローカル作業領域に保存します。</p>
+<p>途中のアップロードを再開するためのセッション情報は、アクセスを制限したローカルファイルで保持します。トークン、クライアントの秘密情報、セッション情報を公開ログや公開説明ページに含めない設計です。</p>
+<h2>外部サービスとの情報のやり取り</h2>
+<p>Google・YouTubeには認証とAPI操作に必要な情報、および本人が送信する動画・メタデータを送ります。</p>
+<p>継続改善機能では、集計データから作る分析の要約、動画の識別情報を含み得る企画の根拠、企画意図、試作に必要な制約や診断値を、OpenAIのCodexを通じて外部AIに送信する経路があります。これは企画案や試作案の生成に使用します。認証情報・セッション情報・ローカルのファイル参照を除外し、ソース全文や動画ファイルをこの企画用AI入力に送らない設計です。</p>
+<p>外部AI側の入力データの保存やモデル改善への利用の扱いは、本人が利用するアカウント、契約、データ設定に依存します。本ポリシーで、外部サービス側の保存や学習利用を一律に否定するものではありません。利用前に本人が適用されるサービス条件とデータ設定を確認します。</p>
+<p>Google側の取り扱いは<a href="https://policies.google.com/privacy">Googleプライバシーポリシー</a>、OpenAI側の取り扱いは<a href="https://openai.com/policies/privacy-policy/">OpenAIプライバシーポリシー</a>をご確認ください。</p>
+<h2>保存期間と削除</h2>
+<p>現行実装では、送信の重複防止や制作・分析の履歴確認のため、関連記録をローカルに継続保存します。これらのAPIデータに一律の自動削除期限や、自動消去ボタンはありません。保存の必要性の見直しと削除は、利用者である運営者本人が手動で行います。</p>
+<p>利用を終了するときや保存データの削除が必要なときは、本人が稼働中の処理を停止し、Keychainの該当認証情報、ローカルのAPI取得データ、分析要約、関連する処理記録とそのバックアップを確認して削除します。通常の一時ファイル整理だけでは、これらの記録は削除されません。</p>
+<p>アクセスは<a href="https://security.google.com/settings/security/permissions">Googleアカウントのアクセス権管理</a>から取り消せます。権限の取り消しとローカルに保存した情報の削除は別の操作です。ローカル情報を削除しても、YouTube上の動画やGoogle側の情報は削除されません。YouTube上の動画はYouTube Studio等で本人が管理します。</p>
+<h2>この説明サイト</h2>
+<p>このサイトでは認証、APIアクセス、動画送信を行いません。独自のアクセス解析、広告、動画埋め込み、入力フォーム、Cookieを利用する機能は設置していません。サイトの配信にはGitHub Pagesを使用し、配信元はアクセス時の接続情報等を処理する場合があります。<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHubのプライバシー声明</a>をご確認ください。</p>
+<h2>お問い合わせと更新</h2>
+<p>質問・苦情・保存データの削除についての問い合わせ窓口は、<a href="https://github.com/TN-House/asmr-koubou-shorts-factory-site/issues">公開リポジトリのIssues</a>です。Issuesに認証情報、個人情報、非公開分析データを貼らないでください。利用者本人は、保存情報を管理するMac上で削除を行えます。</p>
+<p>データの用途や送信先が変わる場合は本ポリシーを更新し、本人が変更内容と必要な同意を確認してから利用します。制定・最終更新：2026年10月11日。</p>
+</article></main>
+<footer><span>TN-House / ASMR KOUBOU</span><a href="https://github.com/TN-House/asmr-koubou-shorts-factory-site/issues">お問い合わせ</a><span>更新日 2026年10月11日</span></footer>
+</body>
+</html>
